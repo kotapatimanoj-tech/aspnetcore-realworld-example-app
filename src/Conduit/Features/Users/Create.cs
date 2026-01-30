@@ -26,7 +26,7 @@ public class Create
         {
             RuleFor(x => x.User.Username).NotNull().NotEmpty();
             RuleFor(x => x.User.Email).NotNull().NotEmpty();
-            RuleFor(x => x.User.Password).NotNull().NotEmpty();
+            RuleFor(x => x.User.Password).NotNull().NotEmpty().MinimumLength(16);
         }
     }
 

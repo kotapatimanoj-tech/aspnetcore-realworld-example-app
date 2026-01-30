@@ -30,7 +30,7 @@ public class Login
         {
             RuleFor(x => x.User).NotNull();
             RuleFor(x => x.User.Email).NotNull().NotEmpty();
-            RuleFor(x => x.User.Password).NotNull().NotEmpty();
+            RuleFor(x => x.User.Password).NotNull().NotEmpty().MinimumLength(16);
         }
     }
 
